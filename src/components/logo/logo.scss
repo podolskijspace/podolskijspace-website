@@ -2,7 +2,5 @@
   display: block;
   font-family: 'Comic Neue', cursive;
   color: $light-text;
-  &.active {
-    cursor: default;
-  }
+  cursor: pointer;
 }

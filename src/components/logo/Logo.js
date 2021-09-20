@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Logo = ({mod=""}) => {
   return (
-    <a className={"logo active " + mod}>
+    <Link to="/" className={"logo " + mod}>
       podolskijspace
-    </a>
+    </Link>
   )
 }
 

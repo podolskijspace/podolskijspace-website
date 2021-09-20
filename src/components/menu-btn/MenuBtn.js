@@ -1,9 +1,13 @@
 import React from "react";
+import { connect } from "react-redux";
 
-const MenuBtn = () => {
+const MenuBtn = ({onMenuClick = null, menuActive}) => {
   return (
-    <div className="menu-btn js-menu-btn">
-      <svg className="ham ham6" viewBox="0 0 100 100" width="40">
+    <button 
+    className={`menu-btn js-menu-btn${menuActive ? ' menu-btn--active' : ''}`}
+    onClick={onMenuClick}
+    >
+      <svg className={`ham ham6${menuActive ? ' active' : ''}`} viewBox="0 0 100 100" width="40">
         <path
               className="line top"
               d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
@@ -14,8 +18,14 @@ const MenuBtn = () => {
               className="line bottom"
               d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
       </svg>
-    </div>
+    </button>
   )
 }
 
-export default MenuBtn;
+const mstp = ({menuActive}) => {
+  return {
+    menuActive,
+  }
+}
+
+export default connect(mstp)(MenuBtn);

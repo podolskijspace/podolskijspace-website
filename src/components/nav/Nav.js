@@ -1,28 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Nav = ({mod=""}) => {
   return (
     <div className={"nav " + mod}>
       <ul className="nav__list">
         <li className="nav__item">
-          <a className="nav__link active">
+          <Link to="/" className="nav__link js-total-close active">
             Главная
-          </a>
+          </Link>
         </li>
         <li className="nav__item">
-          <a href="./about" className="nav__link">
+          <Link to="/about" className="nav__link js-total-close">
             Моя история
-          </a>
+          </Link>
         </li>
         <li className="nav__item">
-          <a href="./advantages" className="nav__link">
+          <Link to="/advantages" className="nav__link js-total-close">
             Достижения
-          </a>
+          </Link>
         </li>
         <li className="nav__item">
-          <a href="./thoughts/" className="nav__link">
+          <Link to="/thoughts/" className="nav__link js-total-close">
             Мысли и идеи
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

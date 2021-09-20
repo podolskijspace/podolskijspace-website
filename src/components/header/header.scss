@@ -1,12 +1,17 @@
 .header{
   position: relative;
   height: 100vh;
-  min-height: 500px;
+  min-height: 200px;
   width: 100%;
 	max-width: 1920px;
   color: $dark-text;
   text-align: center;
   overflow: hidden;
+  transition: height .5s, min-height .5s;
+
+  &--add {
+    height: 200px;
+  }
   
   &__layover{
     position: absolute;
