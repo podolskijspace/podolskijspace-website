@@ -1,0 +1,103 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  height: 100%;
+  // transform: translateX(-100%);
+  transition: 0.6s;
+
+  &--active {
+    transform: none;
+
+    .menu__layover {
+      pointer-events: all;
+    }
+  }
+
+  &__me {
+    margin-left: auto;
+  }
+
+  &__wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 300px;
+    height: 100%;
+    padding: 25px 15px 20px;
+    color: $light-text;
+    background: $primary;
+  }
+
+  &__layover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    pointer-events: none;
+  }
+}
+
+.menu-btn {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  background: rgba(#ffffff, 0.5);
+  border-radius: 5px;
+  &--active{
+    background: transparent;
+  }
+}
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 600ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ham6 .top {
+  stroke-dasharray: 40 172;
+}
+
+
+.ham6 .middle {
+  stroke-dasharray: 40 111;
+}
+
+.ham6 .bottom {
+  stroke-dasharray: 40 172;
+}
+
+.ham6.active .top {
+  stroke-dashoffset: -132px;
+}
+
+.ham6.active .middle {
+  stroke-dashoffset: -71px;
+}
+
+.ham6.active .bottom {
+  stroke-dashoffset: -132px;
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #000;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+
+

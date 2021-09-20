@@ -1,0 +1,41 @@
+.me {
+  display: flex;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+  &__name {
+    margin: 0 0 4px;
+    font-size: 14rem;
+    font-family: 'Oswald', sans-serif;
+    line-height: 100%;
+    color: $light-text;
+  }
+
+  &__text {
+    line-height: 100%;
+    color: $light-text;
+    margin: 0;
+  }
+  &__img {
+    width: 80px;
+    height: 80px;
+    margin-left: 15px;
+    border-radius: 50%;
+    background: $light-text;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+      object-fit: cover;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+    }
+  }
+}
