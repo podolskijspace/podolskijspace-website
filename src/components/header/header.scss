@@ -9,6 +9,10 @@
   overflow: hidden;
   transition: height .5s, min-height .5s;
 
+  @include tablet {
+    height: 200px;
+  }
+
   &--add {
     height: 200px;
   }
@@ -19,7 +23,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(37, 46, 115, .4);
+    background: rgba(37, 46, 115, .35);
   }
   &__text {
     color: $light-text;

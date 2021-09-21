@@ -8,7 +8,6 @@ import { Route, withRouter } from "react-router-dom";
 const Header = ({match, history}) => {
   const headerMod = (history.location.pathname.length - 1) ? ' header--add': '';
 
-  console.log(headerMod);
   return (
 
     <header className={`header${headerMod}`} style={{background: `url(${bg}) no-repeat center`}}>
