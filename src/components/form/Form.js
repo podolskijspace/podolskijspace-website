@@ -15,10 +15,9 @@ const Form = () => {
   }
 
   const ajaxSend = async (formData) => {
-      const fetchResp = await fetch('./send.php', {
+      const fetchResp = await fetch('http://react-podolskij.space//send.php', {
           method: 'POST',
-          header: 'allow',
-          credentials:"include",
+          body: formData
       });
       if (!fetchResp.ok) {
           throw new Error(`Ошибка по адресу ${fetchResp.url}, статус ошибки ${fetchResp.status}`);
@@ -43,7 +42,6 @@ const Form = () => {
       <input name="name" type="text"/>
       <input name="phone" type="text"/>
       <input type="submit"/>
-      <input name="act" type="text" value="order"/>
     </form>
   )
 }
