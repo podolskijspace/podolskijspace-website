@@ -1,11 +1,10 @@
-import React, {useRef} from "react";
-import emailjs from 'emailjs-com';
+import React from "react";
 
 
 const Form = () => {
-  const sendForm = (event) => {
+  function sendForm(event) {
     event.preventDefault();
-    const formData = new FormData(this);
+    const formData = new FormData(event.target);
 
     ajaxSend(formData)
         .then((response) => {
@@ -24,18 +23,6 @@ const Form = () => {
       }
       return await fetchResp.text();
   };
-  // const form = useRef();
-
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-
-  //   emailjs.sendForm('service_4g4xjyl', 'template_7iuybyf', e.target, 'user_Tn9ItxCZ1qZzAzyoqU4Ix')
-  //     .then((result) => {
-  //         console.log(result.text);
-  //     }, (error) => {
-  //         console.log(error.text);
-  //     });
-  // };
 
   return (
     <form onSubmit={sendForm}>
