@@ -1,11 +1,11 @@
 import React from "react";
 import Container from '../container/Container';
-import bg from "../../images/header-bg.jpg";
+import bg from "../../images/png/header-bg.jpg";
 import Title from "../title/Title";
 import { Route, withRouter } from "react-router-dom";
 
 
-const Header = ({match, history}) => {
+const Header = ({history}) => {
   const headerMod = (history.location.pathname.length - 1) ? ' header--add': '';
 
   return (

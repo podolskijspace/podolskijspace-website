@@ -1,5 +1,5 @@
 import React from "react";
-import avatar from "../../images/me.jpg"
+import avatar from "../../images/jpg/me.jpg"
 
 const Me = ({mod = ""}) => {
   return (
